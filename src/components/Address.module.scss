@@ -1,0 +1,16 @@
+@import "../styles/variables.scss";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.protocol {
+  margin-right: 5px;
+}

@@ -1,0 +1,30 @@
+@import "../../styles/list";
+
+.cardTitle {
+  background: $table-head;
+}
+
+.cardBodyContainer {
+  overflow-x: auto;
+}
+
+.wrapper {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.success {
+  color: $green;
+  font-weight: bolder;
+}
+
+.fail {
+  color: $red;
+}
+
+.amount {
+  display: flex;
+  white-space: pre;
+  flex-direction: column;
+}

@@ -1,0 +1,19 @@
+@import "../../styles/list";
+
+.action:first-child,
+.value:first-child {
+  margin-left: 0px;
+}
+
+.action {
+  margin: 2.5px 0px 2.5px 5px;
+  font-weight: bold;
+}
+
+.value {
+  margin-left: 5px;
+}
+
+.wrapper {
+  line-height: 27px;
+}

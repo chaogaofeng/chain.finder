@@ -1,0 +1,114 @@
+@import "../../styles/variables.scss";
+
+.title {
+  font-size: 24px;
+  margin-bottom: 11px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.type {
+  height: 20px;
+  padding: 1px 12px;
+  margin-right: 10px;
+  border-radius: 13.5px;
+  background-color: #e4e8f6;
+  line-height: 1.64;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.date {
+  @media (max-width: $breakpoint) {
+    font-size: 12px;
+  }
+}
+
+.txTime {
+  @media (max-width: $breakpoint) {
+    line-height: 2.7;
+  }
+}
+
+.status {
+  padding: 3px 10px;
+  border-radius: 15px;
+  background-color: $green;
+  font-weight: 500;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.success {
+  background-color: $green;
+}
+
+.pending {
+  background-color: $orange;
+}
+
+.fail {
+  background-color: $red;
+}
+
+.failedMsg {
+  display: flex;
+  background: #fff8f9;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  border: 1px solid #ffe6e7;
+  border-radius: 5px;
+  color: $red;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 50px 0px;
+  .row {
+    display: flex;
+    border-bottom: 1px solid $line;
+    line-height: 60px;
+    @media (max-width: $breakpoint) {
+      flex-direction: column;
+      line-height: 50px;
+    }
+    .head {
+      font-weight: 500;
+      min-width: 240px;
+    }
+    .body {
+      padding: 0 30px;
+      word-break: break-all;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      @media (max-width: $breakpoint) {
+        padding: 0 0 20px;
+      }
+    }
+  }
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.sideLine {
+  border-right: 1px solid #d8ddf0;
+  border-left: 1px solid #d8ddf0;
+  margin: 0 10px;
+  padding: 0 10px;
+}
