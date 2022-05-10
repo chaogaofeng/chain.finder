@@ -1,12 +1,6 @@
-# Terra Finder
+# Finder
 
-![banner](./terra-finder.png)
-
-[![CircleCI](https://circleci.com/gh/terra-project/finder.svg?style=svg)](https://circleci.com/gh/terra-project/finder)
-
-The Terra Finder is a tool to search through blocks, transactions, and accounts on the Terra blockchain.
-
-The Finder is derived from the [Cosmos Explorer](https://github.com/cosmos/explorer).
+The Finder is a tool to search through blocks, transactions, and accounts on the blockchain.
 
 ## Project setup
 ```
@@ -19,14 +13,16 @@ If required, edit `.env.development`.
 For local development you might want to use this configuration:
 
 ```
+BASE_DENOM=ugnc
+ADDRESS_PREFIX=gnc
 HOST=localhost
 HTTPS=false
 BROWSER=none
-REACT_APP_DEFAULT_NETWORK=localterra
+REACT_APP_DEFAULT_NETWORK=local
 ```
 
 `REACT_APP_DEFAULT_NETWORK` is the default selected network that finder will use.
-See `src/config/networks.ts` for the list of available networks.
+See `public/chains.json` for the list of available networks.
 
 
 ### Compiles and hot-reloads for development

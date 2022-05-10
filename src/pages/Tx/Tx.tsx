@@ -5,9 +5,9 @@ import { get, last, isEmpty } from "lodash";
 import { useRecoilValue } from "recoil";
 import c from "classnames";
 import {
-  getTxAllCanonicalMsgs,
+  getTxCanonicalMsgs,
   createLogMatcherForActions
-} from "@terra-money/log-finder-ruleset";
+} from "@gnchain/chain.js/dist/log-finder-ruleset";
 import { formatDistanceToNowStrict } from "date-fns";
 import apiClient from "../../apiClient";
 import Finder from "../../components/Finder";
@@ -41,10 +41,11 @@ const TxComponent = ({ hash }: { hash: string }) => {
   }
 
   const isPending = !response?.height;
-  const matchedMsg = getTxAllCanonicalMsgs(
-    JSON.stringify(response),
-    logMatcher
-  );
+  const matchedMsg = undefined;
+  // const matchedMsg = getTxCanonicalMsgs(
+  //   JSON.stringify(response),
+  //   logMatcher
+  // );
 
   const fee: Coin[] = get(response, "tx.value.fee.amount");
   const tax: string[] = response.logs

@@ -4,14 +4,15 @@ import isBase64 from "is-base64";
 import { Dictionary } from "ramda";
 import { countries, Country } from "countries-list";
 import { filter } from "lodash";
-import { Coin } from "@terra-money/terra.js";
+import { Coin } from "@gnchain/chain.js";
 import { isInteger } from "./math";
 import { isTnsName } from "../libs/tns";
 
 export const DEFAULT_CURRENCY = `uusd`;
-export const BASE_DENOM = `uluna`;
+export const BASE_DENOM = process.env.BASE_DENOM || `ugnc`;
 export const ASSET_URL = "https://assets.terra.money";
-export const TERRA_ADDRESS_REGEX = /(terra[0-9][a-z0-9]{38})/g;
+export const ADDRESS_PREFIX = process.env.ADDRESS_PREFIX || `gnc`;
+export const ADDRESS_REGEX = "/(" + ADDRESS_PREFIX + "[0-9][a-z0-9]{38})/g";
 
 export function getEndpointByKeyword(keyword: string) {
   const key = keyword.toLowerCase();
@@ -20,9 +21,9 @@ export function getEndpointByKeyword(keyword: string) {
     return `/blocks/${key}`;
   } else if (isTnsName(key)) {
     return `/address/${key}`;
-  } else if (key.indexOf("terravaloper") === 0) {
+  } else if (key.indexOf(ADDRESS_PREFIX + "valoper") === 0) {
     return `/validator/${key}`;
-  } else if (key.indexOf("terra") === 0) {
+  } else if (key.indexOf(ADDRESS_PREFIX) === 0) {
     return `/address/${key}`;
   } else if (key.length === 64) {
     return `/tx/${key}`;
@@ -57,7 +58,7 @@ export function isValidatorAddress(keyword: string) {
   if (
     keyword &&
     keyword.length === 51 &&
-    keyword.indexOf("terravaloper") > -1
+    keyword.indexOf(ADDRESS_PREFIX + "valoper") > -1
   ) {
     return true;
   }
@@ -140,8 +141,8 @@ export const splitCoinData = (coin: string) => {
     const denom = coinData.denom;
     return { amount, denom };
   } catch {
-    const denom = coin.match(TERRA_ADDRESS_REGEX)?.[0];
-    const amount = coin.replace(TERRA_ADDRESS_REGEX, "");
+    const denom = coin.match(ADDRESS_REGEX)?.[0];
+    const amount = coin.replace(ADDRESS_REGEX, "");
     if (denom && amount) {
       return { amount, denom };
     }

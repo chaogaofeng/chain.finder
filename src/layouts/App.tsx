@@ -4,7 +4,7 @@ import { Dictionary } from "ramda";
 import {
   createActionRuleSet,
   createAmountRuleSet
-} from "@terra-money/log-finder-ruleset";
+} from "@gnchain/chain.js/dist/log-finder-ruleset";
 import routes from "../routes";
 import ErrorBoundary from "../components/ErrorBoundary";
 import { useCurrentChain } from "../contexts/ChainsContext";

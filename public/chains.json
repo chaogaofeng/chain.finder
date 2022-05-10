@@ -1,0 +1,8 @@
+{
+    "local": {
+      "name": "local",
+      "chainID": "local",
+      "lcd": "http://localhost:1337",
+      "mantle": ""
+    }
+}

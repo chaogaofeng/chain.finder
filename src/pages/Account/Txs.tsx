@@ -5,7 +5,7 @@ import {
   LogFinderAmountResult,
   getTxAmounts,
   createLogMatcherForAmounts
-} from "@terra-money/log-finder-ruleset";
+} from "@gnchain/chain.js/dist/log-finder-ruleset";
 import Pagination from "../../components/Pagination";
 import FlexTable from "../../components/FlexTable";
 import Card from "../../components/Card";

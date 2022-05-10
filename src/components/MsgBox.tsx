@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import c from "classnames/bind";
-import { LogFinderActionResult } from "@terra-money/log-finder-ruleset";
+import { LogFinderActionResult } from "@gnchain/chain.js/dist/log-finder-ruleset";
 import CoinComponent from "../components/Coin";
 import {
   isTerraAddress,

@@ -1,4 +1,4 @@
-import { Coin } from "@terra-money/terra.js";
+import { Coin } from "@gnchain/chain.js";
 import BigNumber from "bignumber.js";
 import format from "../../scripts/format";
 import { isFinite } from "../../scripts/math";

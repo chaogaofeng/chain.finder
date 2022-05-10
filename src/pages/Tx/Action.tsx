@@ -1,4 +1,4 @@
-import { TxDescription } from "@terra-money/react-base-components";
+import { TxDescription } from "@gnchain/react-base-components";
 import { useCurrentChain } from "../../contexts/ChainsContext";
 import useLCDClient from "../../hooks/useLCD";
 import s from "./Action.module.scss";

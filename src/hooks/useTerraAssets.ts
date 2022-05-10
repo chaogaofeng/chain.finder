@@ -15,7 +15,7 @@ const useTerraAssets = <T = any>(path: string) => {
         const { data } = await axios.get(path, config);
         setData(data);
       } catch (error) {
-        setError(error);
+        // setError(error);
       }
       setLoading(false);
     };

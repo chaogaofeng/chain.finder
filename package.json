@@ -1,6 +1,6 @@
 {
   "name": "finder",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
@@ -45,9 +45,8 @@
     "@apollo/client": "^3.3.6",
     "@material-ui/core": "^4.12.3",
     "@terra-money/log-finder": "^1.1.6",
-    "@terra-money/log-finder-ruleset": "^1.0.5",
-    "@terra-money/react-base-components": "^1.0.1",
-    "@chain.js/chain": "^0.1.0",
+    "@gnchain/react-base-components": "^0.1.0",
+    "@gnchain/chain.js": "^0.1.0",
     "@types/recoil": "^0.0.9",
     "ace-builds": "^1.4.12",
     "axios": "^0.21.1",

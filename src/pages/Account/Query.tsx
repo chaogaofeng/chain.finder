@@ -51,7 +51,7 @@ const Query = () => {
 
       setData(result);
     } catch (error) {
-      setError(error);
+      // setError(error);
     }
   };
 

@@ -1,4 +1,4 @@
-import { LCDClient } from "@terra-money/terra.js";
+import { LCDClient } from "@gnchain/chain.js";
 import { Buffer } from "buffer";
 import keccak256 from "keccak256";
 import { useCurrentChain } from "../contexts/ChainsContext";

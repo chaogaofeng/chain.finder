@@ -1,7 +1,7 @@
 import c from "classnames";
 import { useRecoilValue } from "recoil";
 import { Dictionary } from "ramda";
-import { AccAddress } from "@terra-money/terra.js";
+import { AccAddress } from "@gnchain/chain.js";
 import format from "../scripts/format";
 import { Whitelist } from "../store/WhitelistStore";
 import { Contracts } from "../store/ContractStore";

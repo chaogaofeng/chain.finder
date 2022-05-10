@@ -30,7 +30,7 @@ const useFetch = ({
 
         setData(result.data);
       } catch (error) {
-        setError(error);
+        // setError(error);
       }
       setIsLoading(false);
     };
